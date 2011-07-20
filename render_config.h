@@ -30,12 +30,12 @@
 // Maximum number of configurations that mod tile will allow
 #define XMLCONFIGS_MAX 10
 
-// Mapnik input plugins (will need to adjust for 32 bit libs)
-#define MAPNIK_PLUGINS "/usr/local/lib64/mapnik/input"
+// Mapnik input plugins
+#define MAPNIK_PLUGINS "/usr/lib/mapnik/0.7/input"
 
 // Default directory to search for fonts. Recursion can be enabled if desired.
-#define FONT_DIR "/usr/local/lib64/mapnik/fonts"
-#define FONT_RECURSE 0
+#define FONT_DIR "/usr/share/fonts/truetype"
+#define FONT_RECURSE 1
 
 // Typical interval between planet imports, used as basis for tile expiry times
 #define PLANET_INTERVAL (7 * 24 * 60 * 60)

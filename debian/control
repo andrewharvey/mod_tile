@@ -2,12 +2,12 @@ Source: libapache2-mod-tile
 Section: utils
 Priority: optional
 Maintainer: Frederik Ramm <frederik@remote.org>
-Build-Depends: debhelper (>= 7), apache2-prefork-dev (>= 2.2.3) | apache2-threaded-dev (>= 2.2.3), libmapnik-dev, dpatch
+Build-Depends: debhelper (>= 7), apache2-prefork-dev (>= 2.2.3) | apache2-threaded-dev (>= 2.2.3), libmapnik-dev, dpatch, libicu-dev
 Standards-Version: 3.8.0
 
 Package: libapache2-mod-tile
 Architecture: any
-Depends: ${misc:Depends}, renderd | tirex-master, apache2.2-common, apache2-mpm-prefork | apache2-mpm-worker
+Depends: ${misc:Depends}, renderd | tirex-master, apache2.2-common, apache2-mpm-prefork | apache2-mpm-worker, libicu44
 Suggests: renderd
 Description: Apache module to deliver tiles created by renderd
  This Apache module receives map tiles requests and satisfies them from

@@ -40,16 +40,16 @@ clean:
 	make -C iniparser3.0b veryclean
 
 RENDER_CPPFLAGS += -g -O2 -Wall
-RENDER_CPPFLAGS += -I/usr/local/include/mapnik -I/usr/local/include/
+RENDER_CPPFLAGS += -I/usr/include/mapnik -I/usr/include/
 RENDER_CPPFLAGS += $(shell freetype-config --cflags)
 
 RENDER_LDFLAGS += -g
 RENDER_LDFLAGS += -lpthread
 
 ifeq ($(OSARCH), x86_64)
-RENDER_LDFLAGS += -L/usr/local/lib64
+RENDER_LDFLAGS += -L/usr/lib64
 else
-RENDER_LDFLAGS += -L/usr/local/lib
+RENDER_LDFLAGS += -L/usr/lib
 endif
 
 RENDER_LDFLAGS += -lmapnik -Liniparser3.0b -liniparser
